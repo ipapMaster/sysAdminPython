@@ -49,6 +49,8 @@ def send_mail(email, subject, text, attachment=None):
     server.quit()
 
     # print(f'from={addr_from}, password={password}, host={host}, port={port}')
+    # result = mimetypes.guess_type('sample.py') # (text/x-python, None)
+    # result = mimetypes.guess_type('sample.txt')  # (text/plain)
 
 
 if __name__ == '__main__':
