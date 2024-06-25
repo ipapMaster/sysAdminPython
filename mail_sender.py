@@ -39,7 +39,7 @@ def send_mail(email, subject, text, attachment=None):
             part = MIMEBase('application', 'octet-stream')
             part.set_payload(file.read())
             encoders.encode_base64(part)
-            part.add_header('Content-Disposition', f'attachment; filename={attachment}')
+            part.add_header('Content-Disposition', f'attachment; filename={os.path.basename(attachment)}')
         msg.attach(part)
     # Конец блока вложения
 
