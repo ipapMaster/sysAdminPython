@@ -2,7 +2,7 @@ from sys import platform
 import time
 from subprocess import run, PIPE
 
-host_addr = 'google.com'
+host_addr = '172.28.202.1'
 counter = 0
 
 
@@ -20,9 +20,11 @@ while True:
     if response.returncode == 0:
         print(response.stdout.decode('cp866'))
         print('Код ответа:', response.returncode)
+        counter = 0
     else:
         counter += 1
+        print(counter)
         if counter > 10:
             counter = 0
-            # отправить sms, почту....
+            print('Отправлена почта. Сервер не отвечает')
     time.sleep(1)
