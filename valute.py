@@ -20,11 +20,11 @@ config.read('valute.conf')
 cbr_url = config.get('general', 'cbr_url')
 response = requests.get(cbr_url)
 if response.status_code == 200:
-    print('Ok')
+    # print('Ok')
     text = response.text
     response.close()
     json_dict = json.loads(text)
-    print('Дата', '.'.join(json_dict['Timestamp'][:10].split('-')[::-1]))
+    print('Дата:', '.'.join(json_dict['Timestamp'][:10].split('-')[::-1]))
     print('Курс доллара', end=': ')
     rate = json_dict['Valute']['USD']['Value']
     print(rate, form_of_words(int(rate),
