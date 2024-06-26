@@ -13,8 +13,8 @@ import re
 
 # pattern = r'<img.*>' # greedy quantifier ("жадный")
 # pattern = r'<img.*?>'  # minor quantifier ("не жадный")
-pattern = r'<img[^>]+src="([^">]+)"'  # minor quantifier (без угловых скобок)
-string = 'Картинка тут <img src="bg.jpg"> в тексте</p>'
+pattern = r'http://[\S]+'  # minor quantifier (без угловых скобок)
+string = 'Информация находится в http://google.com'
 
 # result = re.match(pattern, string)  # ищет лишь в начале строки
 # result = re.search(pattern, string)  # ищет в любой части строки

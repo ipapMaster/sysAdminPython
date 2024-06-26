@@ -1,2 +1,9 @@
-transliterate~=1.10.2
-python-dotenv~=1.0.1
+certifi==2024.6.2
+charset-normalizer==3.3.2
+idna==3.7
+python-dotenv==1.0.1
+requests==2.32.3
+schedule==1.2.2
+six==1.16.0
+transliterate==1.10.2
+urllib3==2.2.2
