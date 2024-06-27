@@ -2,7 +2,7 @@ from sys import platform
 import time
 from subprocess import run, PIPE
 
-host_addr = '172.28.202.1'
+host_addr = '172.21.69.171'
 counter = 0
 
 

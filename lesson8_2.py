@@ -1,7 +1,7 @@
 import configparser
 
 cfg = configparser.ConfigParser()
-cfg.read('main.conf')
+cfg.read('main.ini')
 sects = cfg.sections()
 print(sects)
 sect = cfg.options('one')
