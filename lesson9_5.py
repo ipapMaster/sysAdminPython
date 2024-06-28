@@ -1,7 +1,7 @@
 import socket
 
-host = 'localhost'
-port = 5678
+host = '127.0.0.1'
+port = 54783
 
 sock = socket.socket()
 sock.bind((host, port))
@@ -15,7 +15,7 @@ try:
         line = file.readline()
         if line:
             line = line.rsplit()
-            if line == 'quit':
+            if line[0] == 'quit':
                 break
             print(f'{addr} -> {line}')
 finally:
