@@ -35,5 +35,5 @@ def send_sms(phones, text, total_price=1):
             # СМС отправлен, ответ сервера
             return answer
 
-# пример отправки
+# пример отправки сообщения
 print(send_sms("78121234567", 'Text', 1))
